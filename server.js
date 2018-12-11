@@ -16,9 +16,12 @@ io.on('connection', function (socket) {
     socket.on("send message", function (data) {
         messages.push(data);
         io.sockets.emit("display message", data);
-        socket.on("delet massage",function(message){
-                messages.slice(message);
-        })
+              
+    });
+    socket.on("uzum em jnjem", function () {
+        messages=[];
+        io.sockets.emit("de jnjeq dzer motic");
+              
     });
  });
  
